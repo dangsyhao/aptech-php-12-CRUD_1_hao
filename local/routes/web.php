@@ -15,13 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('index','index');
-Route::view('contact','contact');
+//Masster Layout with Boostrap 4//
+Route::view('index','blog.index');
+Route::view('world','blog.world');
+Route::view('us','blog.world');
+Route::view('technology','blog.technology');
 
-Route::namespace('Admin')->group(function () {
-
-    Route::get('/login','loginController@getLogin');
-    Route::get('/setlogin','loginController@setLogin');
-
-    
-});
+//Get username and Password from Database laravel_hao and table users//
+Route::get('/view','UserController@getView');
