@@ -23,3 +23,9 @@ Route::view('technology','blog.technology');
 
 //Get username and Password from Database laravel_hao and table users//
 Route::get('/view','UserController@getView');
+
+//CRUD with Laravel
+Route::get('index','CrudController@index');
+Route::get('del/{id}','CrudController@del');
+Route::get('add','CrudController@add');
+Route::get('edit/{id}','CrudController@edit');

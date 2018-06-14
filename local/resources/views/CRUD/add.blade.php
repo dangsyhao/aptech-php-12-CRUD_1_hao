@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Blog Template for Bootstrap</title>
+    <title>CRUD LARAVEL HAO</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -25,20 +25,28 @@
   </head>
   <body>
 
-<div class='container'>
+    <div class='container'>
+    <h2 class='text text-center text-primary'>ADD</h2>
 
-  <table class='table table-striped'>
-    <thead>
-      <tr><td><strong>ID</strong></td><td><strong>Name</strong></td><td><strong>Password</strong></td><tr>
-    </thead>
-  <tbody>
-    @foreach($users as $row)
-      <tr><td>{{$row->id}}</td><td>{{$row->name}}</td><td>{{$row->password}}</td></tr>
-    @endforeach
-  </tbody>
-  </table>
+    <form action="http://localhost/laravel-hao/add" method='GET'>
+        <div class="form-group">
+        <label for="email">Name</label>
+        <input type="text" class="form-control" placeholder="Enter name" name="name">
+        </div>
+        <div class="form-group">
+        <label for="pwd">Role</label>
+        <input type="text" class="form-control"  placeholder="Enter role" name="role">
+        </div>
+        <div class="form-group">
+        <label for="pwd">Email</label>
+        <input type="text" class="form-control" placeholder="Enter email" name="email">
+        </div>
+        
+        <button type="submit" name='submit' class="btn btn-primary">Submit</button>
+  </form>
+        
+        
+    </div>
 
-</div>
-    
   </body>
 </html>
